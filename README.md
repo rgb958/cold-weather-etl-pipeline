@@ -2,26 +2,26 @@
 End-to-end pipeline that monitors cold-weather cities using real-time data from [Open-Meteo](https://open-meteo.com) (no API key required).
 
 ## Features
--**Calculates metrics** like [wind chill](https://en.wikipedia.org/wiki/Wind_chill), frostbite risk time and estimated snowfall.
--**Real-time weather ingestion** (hourly via the Open-Meteo API)
--**Dockerized PostgreSQL** for reproducable setup.
--**File caching** for fast reruns.
--**Interactive Streamlit dashboard** with filters and charts.
+- **Calculates metrics** like [wind chill](https://en.wikipedia.org/wiki/Wind_chill), frostbite risk time and estimated snowfall.
+- **Real-time weather ingestion** (hourly via the Open-Meteo API)
+- **Dockerized PostgreSQL** for reproducable setup.
+- **File caching** for fast reruns.
+- **Interactive Streamlit dashboard** with filters and charts.
 
 ## Tech stack
--Python 3.12
--pandas, numpy
--requests (API)
--psycopg2-binary (DB)
--python-dotenv (config)
--pyyaml (locations config)
--streamlit + plotly (dashboard)
--pytest (testing)
--Docker Compose (PostgreSQL)
+- Python 3.12
+- pandas, numpy
+- requests (API)
+- psycopg2-binary (DB)
+- python-dotenv (config)
+- pyyaml (locations config)
+- streamlit + plotly (dashboard)
+- pytest (testing)
+- Docker Compose (PostgreSQL)
 
 ## Prerequisites
-#Python 3.12
-#Docker & Docker Compose (for PostgreSQL)
+- *Python 3.12*
+- *Docker & Docker Compose (for PostgreSQL)*
     ##Ubuntu/WSL: `sudo apt install docker.io docker-compose-plugin`
     ##Windows/macOS: Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
@@ -51,7 +51,7 @@ python3 main.py
 #Launch dashboard
 streamlit run app/dashboard.py
 ```
-Open http://localhost:8501 in your browser to access the dashboard
+Open http://localhost:8501 in your browser to access the dashboard.
 
 ## Example dashboard
 ![Streamlit dashboard](Dashboard.png)
