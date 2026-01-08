@@ -4,7 +4,7 @@ End-to-end pipeline that monitors cold-weather cities using real-time data from 
 ## Features
 - **Calculates metrics** like [wind chill](https://en.wikipedia.org/wiki/Wind_chill), frostbite risk time and estimated snowfall.
 - **Real-time weather ingestion** (hourly via the Open-Meteo API)
-- **Dockerized PostgreSQL** for reproducable setup.
+- **Dockerized PostgreSQL** for reproducible setup.
 - **File caching** for fast reruns.
 - **Interactive Streamlit dashboard** with filters and charts.
 
