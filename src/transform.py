@@ -11,7 +11,7 @@ from datetime import datetime
 
 #frostbite risk time for exposed skin based on wind chill. https://www.weather.gov/bou/windchill
 
-#Snowfall approximated with precipitation and increased fluff for cold temps.
+#Snowfall loosely approximated with precipitation and increased fluff for cold temps.
 
 def wind_chill(air_temperature_celsius: np.ndarray, wind_speed_kmh: np.ndarray) -> np.ndarray:
     v_pow = wind_speed_kmh ** 0.16
@@ -53,7 +53,7 @@ def estimate_snowfall(precip: np.ndarray, temp: np.ndarray) -> np.ndarray:
 def transform_data(raw_rows: list[dict]) -> pd.DataFrame:
     df = pd.DataFrame(raw_rows)
     df["timestamp"] = pd.to_datetime(df["timestamp"], utc = True)
-    #missing vales
+    #missing values
     df = df.replace({None: np.nan})
 
     df["wind_chill"] = wind_chill(df["temperature"].values, df["wind_speed_10m"].values)

@@ -5,7 +5,7 @@ from typing import List, Dict
 from datetime import datetime
 from pathlib import Path
 
-
+# Caching
 CACHE_DIR = Path("cache")
 CACHE_DIR.mkdir(exist_ok=True)
 CACHE_TTL_SECONDS = 3600
@@ -19,9 +19,6 @@ def _is_cache_valid(cache_file: Path) -> bool:
         return False
     age_seconds = (datetime.now() - datetime.fromtimestamp(cache_file.stat().st_mtime)).total_seconds()
     return age_seconds < CACHE_TTL_SECONDS
-
-
-
 
 def fetch_weather(lat: float, lon: float, city: str) -> List[Dict]:
     url = "https://api.open-meteo.com/v1/forecast"

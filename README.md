@@ -22,8 +22,8 @@ End-to-end pipeline that monitors cold-weather cities using real-time data from 
 ## Prerequisites
 - *Python 3.12*
 - *Docker & Docker Compose (for PostgreSQL)*
-    ##Ubuntu/WSL: `sudo apt install docker.io docker-compose-plugin`
-    ##Windows/macOS: Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+    Ubuntu/WSL: `sudo apt install docker.io docker-compose-plugin`
+    Windows/macOS: Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 ## Setup
 
